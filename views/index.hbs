@@ -1,0 +1,10 @@
+<h3>List of projects</h3><br><br>
+{{#if title.users }}
+    {{#each title.users }}
+        
+            <a href="/project/{{this.id}}"><h5>project title :  {{this.projectname}}</h5></a><br>
+
+            
+        
+    {{/each}}
+{{/if}}

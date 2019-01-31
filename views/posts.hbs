@@ -1,0 +1,30 @@
+<h1>
+    Add Projects
+</h1>
+<br>
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div><br>
+    {{/each}}
+
+{{/if}}
+{{#if noerror}}
+    <div class="alert alert-danger">{{noerror}}</div>
+{{/if}}
+<form method="post" action="/add">
+   <div class="form-group">
+    <label>project name</label>
+    <input type="text" class="form-control" placeholder="Project title" name="name">
+  </div>
+  <div class="form-group">
+    <label>Date</label>
+    <input type="text" class="form-control" placeholder="Category" name="date">
+  </div>
+  
+  
+  <div class="form-group">
+    <label>Body</label>
+    <textarea placeholder="body of project" name="text" id="text"></textarea>
+  </div>
+  <button type="submit" class="btn btn-default">save</button>
+</form>
